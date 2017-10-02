@@ -19,15 +19,11 @@ int myStrLen(char *str) {
 }
 
 int myStrCmp(char *s1, char *s2) {
-  int ans = 0, count = 0, max = myStrLen(s1), compare = *s1++ - *s2++;
-  if (myStrLen(s2) > count) {
-    count = myStrLen(s2);
-  }
-  while ((count < max) && !compare) {
+  int compare = *s1++ - *s2++;
+  while (!compare && (*s1 != 0) && (*s2 != 0)) {
     compare = *s1++ - *s2++;
-    count++;
   }
-  return ans;
+  return compare;
 }
 
 

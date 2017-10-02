@@ -9,10 +9,10 @@ char * myStrChr( char*s, char c){
 }
 
 int main(){
-  char[] str = "shenanigans";
+  char str[] = "shenanigans";
   char chr = 'n';
-  printf("from myStrChr: \n %c", strchr(str, chr));
-  printf("from strchr: \n %c", myStrChr(str, chr));
+  printf("from myStrChr: \n %c\n", *myStrChr(str, chr));
+  printf("from strchr: \n %c\n", *strchr(str, chr));
 
   return 0;
 }

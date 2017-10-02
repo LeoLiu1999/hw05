@@ -11,7 +11,8 @@ char * myStrChr( char *s, char c );
 
 int myStrLen(char *str) {
   int count = 0;
-  while (str) {
+  while (*str) {
+    str++;
     count++;
   }
   return count;
